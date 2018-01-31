@@ -1,0 +1,24 @@
+{
+  "projects": [
+    {
+      "imgurl": "img/1.jpg",
+      "caption": "Image 1 Caption"
+    },
+    {
+      "imgurl": "img/2.jpg",
+      "caption": "Image 2 Caption"
+    },
+    {
+      "imgurl": "img/3.jpg",
+      "caption": "Image 3 Caption"
+    },
+    {
+      "imgurl": "img/4.jpg",
+      "caption": "Image 4 Caption"
+    },
+    {
+      "imgurl": "img/5.jpg",
+      "caption": "Image 5 Caption"
+    }
+  ]
+}
