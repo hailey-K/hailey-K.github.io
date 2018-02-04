@@ -1,38 +1,45 @@
 function parsingProjectsForIndex() {
+
+    var projectNumber =0;
     var htm = "";
+    var numberOfArray = $.parseJSON(projects).length; 
     $.each($.parseJSON(projects), function () {
+   
+    var item="";
+  var slideName = "projects"+projectNumber;
+    htm+="<div class='col-lg-12'><div id='"+slideName+"'class='carousel slide' data-ride='carousel'><ol class='carousel-indicators'>";
 
- /*  htm += "<div class='col-lg-12' id='imageCaptionDiv'>"+
-   "<div class='thumbnail'>" +
-            "<img src=" + this.imgurl + " alt ='projects image' height ="+this.height+"width="+this.width+">" +
-            "</div> <div class='caption'><h4>" +this.caption+"</h4><p>"+this.description+"</p></div></div>";
-
-*/
-htm+="<div id='myCarousel' class='carousel slide' data-ride='carousel'>"+
-  "<ol class='carousel-indicators'>"+
-    "<li data-target='#myCarousel' data-slide-to='0' class='active'></li>"+
-    "<li data-target='#myCarousel' data-slide-to='1'></li>"+
-  "</ol>";
-htm += "<div class='carousel-inner'>" +
-            "<div class='carousel-item active'><img  class='d-block w-100' src=" + this.imgurl + " alt ='projects image' height ="+this.height+"width="+this.width+"></div>"
-            +"<div class='carousel-item'>"+
-      "<img class='d-block w-100' src='Images/header.jpg' alt='Second slide'>"
-         /*   "</div> <div class='caption'><h4>" +this.caption+"</h4><p>"+this.description+"</p>*/+"</div></div>";
-
-                htm +=  "<a class='carousel-control-prev' href='#myCarousel' role='button' data-slide='prev'>"+
+    for(i in this.imgurl) {
+      if(i==0){
+        htm +=  "<li data-target='#"+slideName+"' data-slide-to='"+i+"' class='active'></li>";
+        item +="<div class='carousel-item active'><img  class='d-block w-100' src='" + this.imgurl[i] + "' alt ='projects image' height = "+this.height+" width="+this.width+"></div>";/*+this.height+"width="+this.width+"></div>"*/
+        }
+      else{
+        htm += "<li data-target='#"+slideName+"' data-slide-to='"+i+"'></li>";
+        item+="<div class='carousel-item'>"+
+      "<img class='d-block w-100' src='"+this.imgurl[i]+"' alt='Second slide'  height ="+this.height+" width="+this.width+"></div>";
+      }  
+}
+  htm += "</ol><div class='carousel-inner'>"+item;
+ htm += "</div><a class='carousel-control-prev' href='#"+slideName+"' role='button' data-slide='prev'>"+
     "<span class='carousel-control-prev-icon' aria-hidden='true'></span>"+
     "<span class='sr-only'>Previous</span>"+
   "</a>"+
-  "<a class='right carousel-control-next' href='#myCarousel' role='button' data-slide='next'>"+
+  "<a class='right carousel-control-next' href='#"+slideName+"' role='button' data-slide='next'>"+
     "<span class='carousel-control-next-icon' aria-hidden='true'></span>"+
-    "<span class='sr-only'>Next</span>"+"</a></div>";
+    "<span class='sr-only'>Next</span>"+"</a></div><br>"+
+    "<div class='caption'><h4>" +this.caption+"</h4><p>"+this.description+"</p></div></div>";
 
-            if(this.imgurl != "js/json/img/4.png")
-                {
- htm += "<hr>";
-                }
+  if(projectNumber!=numberOfArray-1)
+{
+   htm += "<hr>";
+}
 
-        });
+    projectNumber++;
+    });
      
     document.getElementById("rowProjectsDiv").innerHTML = htm;
+}
+function ShowSlides(slides){
+
 }
