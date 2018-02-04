@@ -7,7 +7,7 @@ function parsingProjectsForIndex() {
    
     var item="";
   var slideName = "projects"+projectNumber;
-    htm+="<div class='col-lg-12'><div id='"+slideName+"'class='carousel slide' data-ride='carousel'><ol class='carousel-indicators'>";
+    htm+="<div class='col-lg-12 row' id='imageCaptionDiv'><div class='col-lg-6'><div id='"+slideName+"'class='carousel slide' data-ride='carousel'><ol class='carousel-indicators'>";
 
     for(i in this.imgurl) {
       if(i==0){
@@ -27,8 +27,8 @@ function parsingProjectsForIndex() {
   "</a>"+
   "<a class='right carousel-control-next' href='#"+slideName+"' role='button' data-slide='next'>"+
     "<span class='carousel-control-next-icon' aria-hidden='true'></span>"+
-    "<span class='sr-only'>Next</span>"+"</a></div><br>"+
-    "<div class='caption'><h4>" +this.caption+"</h4><p>"+this.description+"</p></div></div>";
+    "<span class='sr-only'>Next</span>"+"</a></div></div><br>"+
+    "<div class='col-lg-6'><div class='caption'><h4>" +this.caption+"</h4><p>"+this.description+"</p></div></div></div>";
 
   if(projectNumber!=numberOfArray-1)
 {

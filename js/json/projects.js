@@ -4,7 +4,7 @@ projects = '['+
     '"caption": "Checking defective gas bottle program",'+
     '"description" :"Utilized C#(WinForm), Firebird",'+
      '"height":"350px",'+
-     '"width":"200px"'+
+     '"width":"300px"'+
     '},'+
     '{'+
     '"imgurl": ["js/json/img/2-1.png","js/json/img/2-2.png"],'+
