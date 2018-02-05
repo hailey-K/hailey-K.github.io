@@ -28,7 +28,13 @@ function parsingProjectsForIndex() {
   "<a class='right carousel-control-next' href='#"+slideName+"' role='button' data-slide='next'>"+
     "<span class='carousel-control-next-icon' aria-hidden='true'></span>"+
     "<span class='sr-only'>Next</span>"+"</a></div></div><br>"+
-    "<div class='col-lg-6'><div class='caption'><h4>" +this.caption+"</h4><p>"+this.description+"</p></div></div></div>";
+    "<div class='col-lg-6'><div class='caption'><h4>" +this.caption+"</h4><p>"+this.description+"</p></div>";
+    
+    for(j in this.tools){
+      htm += "<button type='button' class='btn btn-primary' id='buttonsForTools'>"+this.tools[j]+"</button>";
+    }
+    
+    htm +="</div></div>";
 
   if(projectNumber!=numberOfArray-1)
 {

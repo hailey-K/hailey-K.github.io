@@ -21,7 +21,10 @@ header {
 #projectCaptionDiv{
 text-align: center;
 }
-
+#buttonsForTools
+{
+margin-right : 7px;
+}
 hr {
     border:none;
   height: 10px;
